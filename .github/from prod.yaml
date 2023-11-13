@@ -1,1 +1,8 @@
 from prod commit 
+apiVersion: v1
+kind: Secret
+metadata:
+  name: mysecret
+type: Opaque
+data:
+  password: <Password>
