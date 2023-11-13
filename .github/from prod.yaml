@@ -1,7 +1,0 @@
-
-kind: Secret
-metadata:
-  name: mysecret
-type: Opaque
-data:
-  password: <Password>
