@@ -1,5 +1,4 @@
-from prod commit 
-apiVersion: v1
+
 kind: Secret
 metadata:
   name: mysecret
