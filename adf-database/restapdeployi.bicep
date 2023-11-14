@@ -21,7 +21,7 @@ resource linkedService 'Microsoft.DataFactory/factories/linkedservices@2018-06-0
   properties: {
     type: 'AzureBlobStorage', // Update with the appropriate linked service type for Gen2
     typeProperties: {
-      connectionString: '<your_connection_string>' // Update with your Gen2 connection string
+      connectionString: 'DefaultEndpointsProtocol=https;AccountName=datastoragegen2123;AccountKey=14hzPEzoDEVS+vPcmZ7rZOiboTLVIhOj8M8DlhbkUNdiea0xHDBfd+z+f3mCcqBalGSz+s6ydZlx+ASt42J1Gg==;EndpointSuffix=core.windows.net' // Update with your Gen2 connection string
     }
   }
 }
