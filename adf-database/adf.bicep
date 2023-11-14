@@ -1,14 +1,14 @@
 @description('Data Factory Name')
-param dataFactoryName string = 'datafactory${uniqueString(resourceGroup().id)}'
+param dataFactoryName string = 'futuradf'
 
 @description('Location of the data factory.')
 param location string = resourceGroup().location
 
 @description('Name of the Azure storage account that contains the input/output data.')
-param storageAccountName string = 'storage${uniqueString(resourceGroup().id)}'
+param storageAccountName string = 'futuradb'
 
 @description('Name of the blob container in the Azure Storage account.')
-param blobContainerName string = 'blob${uniqueString(resourceGroup().id)}'
+param blobContainerName string = 'futura'
 
 var dataFactoryLinkedServiceName = 'ArmtemplateStorageLinkedService'
 var dataFactoryDataSetInName = 'ArmtemplateTestDatasetIn'
@@ -25,8 +25,13 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
 }
 
 resource blobContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-08-01' = {
-  name: '${storageAccount.name}/default/${blobContainerName}'
+  name: blobContainerName
+  
 }
+
+// Rest of the code remains unchanged
+
+
 
 resource dataFactory 'Microsoft.DataFactory/factories@2018-06-01' = {
   name: dataFactoryName
