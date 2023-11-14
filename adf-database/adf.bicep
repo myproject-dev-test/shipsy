@@ -24,9 +24,7 @@ resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' = {
   kind: 'StorageV2'
 }
 
-resource blobContainer 'Microsoft.Storage/storageAccounts/blobServices/containers@2021-08-01' = {
-  name: '${storageAccount.name}/default/${blobContainerName}'
-}
+
 
 resource dataFactory 'Microsoft.DataFactory/factories@2018-06-01' = {
   name: dataFactoryName
