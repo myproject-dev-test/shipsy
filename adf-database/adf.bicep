@@ -60,5 +60,25 @@ resource functionApp 'Microsoft.Web/sites@2021-03-01' = {
       minTlsVersion: '1.2'
     }
     httpsOnly: true
+    functions: [
+      {
+        name: 'HttpTriggerFunction'
+        scriptFile: 'HttpTriggerFunction/index.js', // Specify the path to your function code
+        bindings: [
+          {
+            type: 'httpTrigger'
+            direction: 'in'
+            name: 'req'
+            authLevel: 'function'
+            methods: ['get', 'post']
+          }
+          {
+            type: 'http'
+            direction: 'out'
+            name: 'res'
+          }
+        ]
+      }
+    ]
   }
 }
