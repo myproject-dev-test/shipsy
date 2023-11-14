@@ -10,7 +10,7 @@ param storageAccountName string = 'storage${uniqueString(resourceGroup().id)}'
 @description('Name of the blob container in the Azure Storage account.')
 param blobContainerName string = 'blob${uniqueString(resourceGroup().id)}'
 
-var dataFactoryLinkedServiceName = 'ArmtemplateStorageLinkedService'
+var dataFactoryLinkedServiceName = 'ArmtemplateStorageLinkedServices'
 var dataFactoryDataSetInName = 'ArmtemplateTestDatasetIn'
 var dataFactoryDataSetOutName = 'ArmtemplateTestDatasetOut'
 var pipelineName = 'ArmtemplateSampleCopyPipeline'
