@@ -1,5 +1,5 @@
 @description('Specifies the location for resources.')
-param location string = 'East US' // Update with your desired location
+param location string = 'East US' // Update with your desired locations
 
 param dataFactoryName string = 'mydata123g'
 param restApiUrl string = 'https://reqres.in/api/users'
