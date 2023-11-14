@@ -4,7 +4,7 @@ param location string = 'East US' // Update with your desired location
 param dataFactoryName string = 'mydata123g'
 param restApiUrl string = 'https://reqres.in/api/users'
 param restApiMethod string = 'GET' // Update with the desired HTTP method
-param gen2LinkedServiceName string = 'gen2LinkedService'
+param gen2LinkedServiceName string = 'gen2LinkedServicse'
 param restApiDatasetInName string = 'restapidatasetin'
 param restApiDatasetOutName string = 'restapidatasetout'
 
