@@ -5,10 +5,10 @@ param dataFactoryName string = 'datafactory26fztylakupe6'
 param dataFactoryLocation string = 'East US'
 
 @description('Name of the Azure storage account that contains the input/output data.')
-param storageAccountName string
+param storageAccountName string ='26fztylakupe6azfunctions'
 
 @description('Name of the blob container in the Azure Storage account.')
-param blobContainerName string
+param blobContainerName string = 'azure-webjobs-hosts'
 
 var dataFactoryLinkedServiceName = 'my-linked-servivce'
 var dataFactoryDataSetInName = 'mydata-TestDatasetIn'
