@@ -31,4 +31,4 @@ jobs:
           subscriptionId: 34fe7e89-cd08-4481-acf3-9a0febe17ac0
           region: East US
           resourceGroupName: test-dev
-          template: adf-database/restapdeployi.bicep
+          template: adf-database/dev-restapi.bicep
