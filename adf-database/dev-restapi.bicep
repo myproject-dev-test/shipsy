@@ -1,10 +1,10 @@
 param storageAccountName string = 'mystorageaccountdev123'
 param blobContainerName string = 'adfcontainer'
-param dataFactoryDataSetInName string = 'devggset'
-param dataFactoryLinkedServiceName string = 'restapilinkedsvc' // Updated linked service name
-param dataFactoryDataSetOutName string = 'devdaataout'
-var pipelineName = 'devpipelehhe'
-var dataFactoryName = 'futuradf'
+param dataFactoryDataSetInName string = 'devvvdataset'
+param dataFactoryLinkedServiceName string = 'restapilinkefhdgf'
+param dataFactoryDataSetOutName string = 'deevvvataout'
+var pipelineName = 'deveepipele'
+var dataFactoryName = 'futuradfd'
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' existing = {
   name: storageAccountName
@@ -20,11 +20,14 @@ resource dataFactoryLinkedService 'Microsoft.DataFactory/factories/linkedservice
   properties: {
     type: 'RestService'
     typeProperties: {
-      url: 'https://dummy.restapiexample.com/api/v1/employees'    // Replace with the actual URL of your REST API
+      url: 'https://dummy.restapiexample.com/api/v1/employees'   // Replace with the actual URL of your REST API
       authenticationType: 'Anonymous' // Update with the authentication type (e.g., 'Basic', 'OAuth', 'Anonymous')
       // Add other authentication properties as needed
     }
   }
+  dependsOn: [
+    storageAccount
+  ]
 }
 
 resource dataFactoryDataSetIn 'Microsoft.DataFactory/factories/datasets@2018-06-01' = {
