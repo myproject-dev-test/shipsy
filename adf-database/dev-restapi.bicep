@@ -4,7 +4,7 @@ param dataFactoryDataSetInName string = 'devvvdataset'
 param dataFactoryLinkedServiceName string = 'restapilinkefhdgf'
 param dataFactoryDataSetOutName string = 'deevvvataout'
 var pipelineName = 'deveepipele'
-var dataFactoryName = 'futuradfd'
+var dataFactoryName = 'datafactory26fztylakupe6'
 
 resource storageAccount 'Microsoft.Storage/storageAccounts@2021-08-01' existing = {
   name: storageAccountName
