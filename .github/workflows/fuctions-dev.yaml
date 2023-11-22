@@ -1,18 +1,15 @@
-name: RUN_E2E_TESTS_JAVA8_LCON
+name: fuction test
+  
 on:
-  push:
-    branches:
-      - master
-      - dev
-      - releases/*
-    paths-ignore:
-      - '**.md'
-  pull_request:
-    paths-ignore:
-      - '**.md'
+  workflow_dispatch:
+
+permissions:
+  id-token: write
+  contents: read
+
 
 env:
-  AZURE_FUNCTIONAPP_NAME: gae-fa-java8-lcon
+  AZURE_FUNCTIONAPP_NAME: dev-fuctionapp
   POM_XML_DIRECTORY: './tests/e2e/java8'
   POM_FUNCTIONAPP_NAME: functionAppName
   JAVA_VERSION: '1.8.x'
@@ -53,7 +50,7 @@ jobs:
     - name: 'Login via Azure CLI'
       uses: azure/login@v1
       with:
-        creds: ${{ secrets.RBAC_GAE_FA_JAVA8_LCON }}
+        creds: '${{ secrets.AZURE_CREDENTIALS }}'
 
     - name: E2E Run Azure Functions Action
       uses: ./
